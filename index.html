@@ -6,9 +6,9 @@
 </head>
 
 <body>
- <script type="text/javascript" src="openpgp.min.js"></script>
+<script type="text/javascript" src="openpgp.min.js"></script>
 <script type="text/javascript" src="require.js"></script>
- <script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="jquery.min.js"></script>
 <script type="text/javascript" src="cryptor.js"></script>
 
 
@@ -18,13 +18,14 @@ To keep you secure, this webpage will encrypt your answers in the browser.
 <br>
 <br>
 <div id="instructions">
-Please complete the survey below. When you're finished. Hit encrypt, and then copy the resulting text and email it to foo@bar.net.
+  <li> Please complete the survey below.
+  <li> When you're finished. Hit <button id="button" onClick="encrypt('publickey.asc')">Encrypt</button> and then copy the resulting text and email it to foo@bar.net.
 <br>
-The information you enter will be encrypted on your computer and only readable by foo@bar.net
+<li>The information you enter will be encrypted on your computer and only readable by foo@bar.net
 
+<br>
 <br>
 </div>
-
 
 <textarea id="input" style='width: 750px; min-height: 300px'>
 
