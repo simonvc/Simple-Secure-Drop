@@ -4,7 +4,7 @@ jQuery.get(public_key_file, function(data) {
     run(data);
 });*/
 var pub_key =
-  ['-----BEGIN PGP PUBLIC KEY BLOCK-----',
+['-----BEGIN PGP PUBLIC KEY BLOCK-----',
 'Version: SKS 1.1.5',
 'Comment: Hostname: pgp.mit.edu',
 '',
@@ -147,7 +147,7 @@ var pub_key =
 run(pub_key);
 }
 function run(pubkey) {
-    if (window.crypto.getRandomValues) {  
+    if (window.crypto.getRandomValues) {
         if ($('#button').html() === "Encrypt") {
 			var openpgp = typeof window !== 'undefined' && window.openpgp ? window.openpgp : require('openpgp.min');
 			openpgp.initWorker({ path:'openpgp.worker.min.js' });
@@ -159,15 +159,15 @@ function run(pubkey) {
 			openpgp.encrypt(options).then(function(ciphertext) {
 				$('#input').val(ciphertext.data);
 			});
-            $('#button').html("Clear");  
-            return true;  
-        } else {  
+            $('#button').html("Clear");
+            return true;
+        } else {
             $('#input').val("");
-            $('#button').html("Encrypt");  
-        }  
-   } else {  
-        $("#button").val("Error");  
-        window.alert("This browser isn't supported!");  
-        return false;  
-    }  
-}  
+            $('#button').html("Encrypt");
+        }
+   } else {
+        $("#button").val("Error");
+        window.alert("This browser isn't supported!");
+        return false;
+    }
+}
